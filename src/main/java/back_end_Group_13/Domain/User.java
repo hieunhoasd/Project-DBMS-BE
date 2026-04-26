@@ -21,5 +21,9 @@ public class User {
     private String password;
     // Thêm dòng @Column này ngay trên biến của bạn
     @Column(name = "fullname")
-    private String fullName;
+    private String fullname;
+    @Column(name = "account_number")
+    private String accountnumber;
+    private Double balance;
+
 }

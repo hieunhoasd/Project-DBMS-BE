@@ -1,5 +1,6 @@
 package back_end_Group_13.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,5 +12,7 @@ import back_end_Group_13.Domain.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByUsernameAndPassword(String username, String password);
+
+    List<User> findByIdNot(Long id);
 
 }
